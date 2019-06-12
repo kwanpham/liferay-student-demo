@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="kwan.org.database.model.Bike">
+		<field name="uuid" type="String" />
+		<field name="bikeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bikeName" type="String" />
+		<field name="brand" type="String" />
+		<field name="studentId" type="long" />
+	</model>
+	<model name="kwan.org.database.model.Student">
+		<field name="uuid" type="String" />
+		<field name="studentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="code" type="String" />
+		<field name="fullName" type="String" />
+		<field name="birthday" type="Date" />
+		<field name="gender" type="boolean" />
+		<field name="address" type="String" />
+	</model>
+</model-hints>

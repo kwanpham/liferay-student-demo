@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_1_0.dtd">
+
+<service-builder package-path="kwan.org.database">
+	<namespace>FOO</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity local-service="true" name="Student"
+		remote-service="true" table="Student" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="studentId" primary="true" type="long"
+			db-name="StudentId" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="code" type="String" db-name="Code" />
+		<column name="fullName" type="String" db-name="FullName" />
+		<column name="birthday" type="Date" db-name="Birthday" />
+		<column name="gender" type="boolean" db-name="Gender" />
+		<column name="address" type="String" db-name="Address" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="studentId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Gender" return-type="Collection">
+			<finder-column name="gender" />
+		</finder>
+
+		<finder return-type="Student" name="Code">
+			<finder-column name="code"></finder-column>
+		</finder>
+
+		<finder return-type="Student" name="StudentId">
+			<finder-column name="studentId"></finder-column>
+		</finder>
+
+		<finder return-type="Collection" name="G_A">
+			<finder-column name="gender"></finder-column>
+			<finder-column name="address"></finder-column>
+		</finder>
+	
+	</entity>
+	
+	
+	<entity name="Bike" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="bikeId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<!-- Other fields -->
+
+
+		<column name="bikeName" type="String" />
+		<column name="brand" type="String" />
+		<column name="studentId" type="long"></column>
+
+		<finder return-type="Collection" name="Brand">
+			<finder-column name="brand"></finder-column>
+		</finder>
+
+		<finder return-type="Collection" name="StudentId">
+			<finder-column name="studentId"></finder-column>
+		</finder>
+
+		<finder return-type="Collection" name="G_S">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="studentId"></finder-column>
+		</finder>
+
+	</entity>
+
+	<exceptions>
+		<exception>StudentCode</exception>
+		<exception>StudentFullName</exception>
+	</exceptions>
+</service-builder>

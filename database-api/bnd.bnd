@@ -1,0 +1,10 @@
+Bundle-Name: database-api
+Bundle-SymbolicName: kwan.org.database.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	kwan.org.database.exception,\
+	kwan.org.database.model,\
+	kwan.org.database.service,\
+	kwan.org.database.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../database-service/service.xml

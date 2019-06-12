@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+    <sql id="kwan.org.database.service.persistence.StudentFinder.findByFullName">
+        <![CDATA[
+            SELECT Student.*
+            FROM Student
+            where Student.fullName like ?
+        ]]>
+    </sql>
+</custom-sql>

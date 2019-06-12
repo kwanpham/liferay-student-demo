@@ -1,0 +1,4 @@
+Bundle-Name: database-web
+Bundle-SymbolicName: kwan.org.database
+Bundle-Version: 1.0.0
+Export-Package: kwan.org.database.constants

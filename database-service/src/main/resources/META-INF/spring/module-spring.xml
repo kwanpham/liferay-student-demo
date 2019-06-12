@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="kwan.org.database.service.impl.BikeLocalServiceImpl" id="kwan.org.database.service.BikeLocalService" />
+	<bean class="kwan.org.database.service.impl.BikeServiceImpl" id="kwan.org.database.service.BikeService" />
+	<bean class="kwan.org.database.service.persistence.impl.BikePersistenceImpl" id="kwan.org.database.service.persistence.BikePersistence" parent="basePersistence" />
+	<bean class="kwan.org.database.service.impl.StudentLocalServiceImpl" id="kwan.org.database.service.StudentLocalService" />
+	<bean class="kwan.org.database.service.impl.StudentServiceImpl" id="kwan.org.database.service.StudentService" />
+	<bean class="kwan.org.database.service.persistence.impl.StudentPersistenceImpl" id="kwan.org.database.service.persistence.StudentPersistence" parent="basePersistence" />
+	<bean class="kwan.org.database.service.persistence.impl.StudentFinderImpl" id="kwan.org.database.service.persistence.StudentFinder" parent="basePersistence" />
+</beans>
